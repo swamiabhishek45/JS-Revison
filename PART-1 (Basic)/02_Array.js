@@ -17,6 +17,7 @@ console.log(Array.isArray(mixed));
 let fruits = ["apple","mango","grapes"];
 console.log(fruits);
 
+// works from end --> push(), pop() is Fast
 fruits.push("banana"); // bcz array is mutable
 console.log(fruits);
 
@@ -24,6 +25,7 @@ let one = fruits.pop();
 console.log(fruits);
 console.log(one);
 
+// works from start --> unshift(), shift() is slow
 fruits.unshift("Guava");
 console.log(fruits);
 
