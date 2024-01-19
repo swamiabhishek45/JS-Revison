@@ -53,11 +53,10 @@ console.log(arr2);
 
 // how to clone array
 let arr1 = [1,2,3,4,5];
-// let arr2 = arr1.slice(0);
-// let arr2 = [].concat(arr1);
 
-// spread operator
-let arr2 = [...arr1,6,7 ];
+// let arr2 = arr1.slice(0); // slice method
+// let arr2 = [].concat(arr1); // concat method
+// let arr2 = [...arr1,6,7] // spread operator
 
 console.log(arr1);
 console.log(arr2);
