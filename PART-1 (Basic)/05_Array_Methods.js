@@ -54,7 +54,7 @@ const sum = numbers.reduce((accumulator, currVal) => {
     return accumulator + currVal;
 }, 100);
 
-console.log(sum);
+console.log(sum); // 125 
 
 const userCart = [
     { Id: 1, name: "mobile", price: 20000 },

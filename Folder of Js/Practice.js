@@ -1,15 +1,8 @@
+let nums = [1,2,3,4];
+let total = 1;
 
-const myVar = "valu 0"
-function myApp(){
-    // const myVar = "Value 1";
-
-    function myFunc1(){
-        // const myVar = "val 23";
-        console.log('inside myFunc', myVar);
-    }
-    console.log(myVar);
-    myFunc1();
+for(let num of nums){
+    total *= num;
 }
 
-myApp();
-myFunc1();
+console.log(total);
