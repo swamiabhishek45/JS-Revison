@@ -59,8 +59,8 @@ const user2 = {
 }
 
 // call
-user1.about.call();
-user1.about.call(user1);
+user1.about.call();  // undefined undefined
+user1.about.call(user1); // Abhishek 20
 user1.about.call(user2, "Reading", "Arj");
 
 // apply
