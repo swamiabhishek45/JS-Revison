@@ -147,6 +147,22 @@ const user2 = new CreateUser("Abhishek", "Swami", 20, "abhi@gmail.com", "Latur")
 console.log(user2);
 
 
+function createUser(firstname, age) {
+  this.firstname = firstname;
+  this.age = age;
+}
+
+createUser.prototype.about = function () {
+  return (
+    `This person's name is ${this.firstname}` +
+    ` and they are ${this.age} years old.`
+  );
+};
+
+const userX = new createUser("Abhishek", 21);
+
+console.log(userX);
+
 /*
 **************************************
 
