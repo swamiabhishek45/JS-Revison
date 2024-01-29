@@ -1,47 +1,29 @@
-console.log("Script start !!!");
+const body = document.querySelector("body")
+const startBtn = document.querySelector("#start");
+const stopBtn = document.querySelector("#stop");
 
-const grandParent = document.querySelector(".grandparent");
-const parent = document.querySelector(".parent");
-const child = document.querySelector(".child");
+function randomColorGenerator(){
+    const red = Math.floor(Math.random() *256);
+    const green = Math.floor(Math.random() *256);
+    const yellow = Math.floor(Math.random() *256);
 
-// Capturing
-// child.addEventListener("click", ()=>{
-//   console.log("Child Captured");
-//   console.log("**********************");
-// }, true)
+    const randomNum = `rgb(${red}, ${green}, ${yellow})`;
 
-// parent.addEventListener("click", ()=>{
-//   console.log("Parent Captured");
-// }, true)
+    return randomNum;
+}
 
-// grandParent.addEventListener("click", ()=>{
-//   console.log("Grandparent Captured");
-// }, true)
+startBtn.addEventListener("click", () => {
+  function color() {
+    const random = randomColorGenerator();
+    body.style.backgroundColor = random;
+  }
+  const id = setInterval(color, 1000);
+});
 
-// document.body.addEventListener("click", ()=>{
-//   console.log("Body Captured");
-// }, true)
-
-// Bubbling
-// child.addEventListener("click", ()=>{
-//   console.log("Child Clicked 👶");
-// })
-// parent.addEventListener("click", ()=>{
-//   console.log("Parent Clicked 💏");
-// })
-// grandParent.addEventListener("click", ()=>{
-//   console.log("Grandparent Clicked 👴");
-// })
-
-// document.body.addEventListener("click", ()=>{
-//   console.log("Body Clicked");
-// })
-
-
-
-// event delegation
-
-grandParent.addEventListener("click", (e) =>{
-  // console.dir(e.currentTarget);
-  console.dir(e.target);
-})
+stopBtn.addEventListener("click", () => {
+ 
+    body.style.backgroundColor = "";
+    clearInterval(id);
+  
+  
+});
