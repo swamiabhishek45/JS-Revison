@@ -112,6 +112,7 @@ var y = 56;
 // console.log(!true);
 
 // 6. Function in JavaScript
+// 1. Function Declaration
 function avg(a, b) {
   c = (a + b) / 2;
   return c;
@@ -120,6 +121,16 @@ function avg(a, b) {
 c1 = avg(4, 6);
 c2 = avg(14, 16);
 // console.log(c1, c2);
+
+// 2. Function Expression
+
+const myFunc = function(){
+
+}
+
+// 3. Arrow Function
+
+const myFunc2 = () => {}
 
 // 7. Conditionals in JavaScript
 /*
@@ -201,8 +212,8 @@ let myLovelyString = "Harry is a good boy good good Harry";
 // console.log(myLovelyString.length)
 // console.log(myLovelyString.indexOf("good"))
 // console.log(myLovelyString.lastIndexOf("good"))
-
 // console.log(myLovelyString.slice(1,4))
+
 d = myLovelyString.replace("Harry", "Rohan");
 // d = d.replace("good", "bad");
 // console.log(d, myLovelyString)
