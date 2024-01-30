@@ -1,29 +1,19 @@
-// Promise.resolve
+const key1 = "obj1";
+const key2 = "obj2";
 
-const myPromise = Promise.resolve(5);
-myPromise.then((val) => {
-  console.log(val);
-});
-
-// then() method always returns Promise
-
-function promiseHai() {
-  return new Promise((resolve, reject) => {
-    // resolve("I");
-  });
+const obj1 = {
+    key: "val1"
 }
 
-promiseHai()
-  .then((val) => {
-    console.log(val);
-    val += " Love";
-    return val;
-  })
-  .then((val) => {
-    console.log(val);
-    val += " Coding";
-    return val;
-  })
-  .then((val) => {
-    console.log(val);
-  });
+const obj2 = {
+    key1: "val2"
+}
+
+const cloneObj = {...obj1, ...obj2};
+
+console.log(cloneObj);
+
+const arr1 = [1,2,34,4];
+const arr2 = [1,'hi', 4,3,2];
+
+console.log([...arr1, ...arr2]);
