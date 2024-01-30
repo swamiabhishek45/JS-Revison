@@ -1,21 +1,29 @@
-const bucket = ["rice", "salst", "coffee", "vadapav", "vegetables"];
+// Promise.resolve
 
-function ricePromise(){
-   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-        const value = false;
+const myPromise = Promise.resolve(5);
+myPromise.then((val) => {
+  console.log(val);
+});
 
-        if(value){
-            resolve({value: "Fried Rice"})
-        }else {
-            reject("Couldn't do it");
-        }
-    }, 2000);
-   })
+// then() method always returns Promise
+
+function promiseHai() {
+  return new Promise((resolve, reject) => {
+    // resolve("I");
+  });
 }
 
-ricePromise().then((friedRice) =>{
-    console.log(friedRice);
-}).catch((error)=>{
-    console.log(error);
-})
+promiseHai()
+  .then((val) => {
+    console.log(val);
+    val += " Love";
+    return val;
+  })
+  .then((val) => {
+    console.log(val);
+    val += " Coding";
+    return val;
+  })
+  .then((val) => {
+    console.log(val);
+  });
