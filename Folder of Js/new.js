@@ -1,43 +1,24 @@
 const URL = "https://jsonplaceholder.typicode.com/posts";
+console.log("Script start");
+// 3. ) Async / Await
 
-function sendRequest(method, url) {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
+// fetch(URL)
+//   .then((res) => {
+  //     return res.json();
+  //   })
+  //   .then((data) => {
+    //     console.log(data);
+    //   });
 
-    xhr.open(method, url);
+const getData = async () => {
+  const response = await fetch(URL);
+  if(!response.ok){
+    throw new Error("Something went wrong")
+  }
+  const data = await response.json();
+  console.log(data);
+  console.log(response);
+};
 
-    xhr.onload = () => {
-      if (xhr.status >= 200 && xhr.status < 300) {
-        resolve(xhr.response);
-      } else {
-        reject(new Error(xhr.status));
-      }
-    };
-
-    xhr.onerror = () => {
-      new Error("somehing went wrong");
-    };
-
-    xhr.send();
-  });
-}
-
-sendRequest("GET", URL)
-  .then((response) => {
-    const data = JSON.parse(response);
-    return data;
-  })
-  .then((data) => {
-    const id = data[3].id;
-    return id;
-  })
-  .then((id) => {
-    const url = `${URL}/${id}`;
-    return sendRequest("GET", url);
-  })
-  .then((newResponse) => {
-    const newData = JSON.parse(newResponse);
-    console.log(newData);
-  }).catch(error=>{
-    console.log(error);
-  })
+getData();
+console.log("Script end");
