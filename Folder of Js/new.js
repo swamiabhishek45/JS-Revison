@@ -1,24 +1,18 @@
-const URL = "https://jsonplaceholder.typicode.com/posts";
-console.log("Script start");
-// 3. ) Async / Await
-
-// fetch(URL)
-//   .then((res) => {
-  //     return res.json();
-  //   })
-  //   .then((data) => {
-    //     console.log(data);
-    //   });
-
-const getData = async () => {
-  const response = await fetch(URL);
-  if(!response.ok){
-    throw new Error("Something went wrong")
+function getAndAdd(num1, num2, onS, onF) {
+  if (typeof num1 === "number" && typeof num2 === "number") {
+    onS(num1, num2);
+  } else {
+    onF();
   }
-  const data = await response.json();
-  console.log(data);
-  console.log(response);
-};
+}
 
-getData();
-console.log("Script end");
+function addTwoNums(num1, num2) {
+  console.log(num1 + num2);
+}
+
+function onFail() {
+  console.log("Wrong data type");
+  console.log("Please pass numbers only");
+}
+
+getAndAdd(4, "f", addTwoNums, onFail);
