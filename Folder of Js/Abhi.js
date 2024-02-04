@@ -1,13 +1,13 @@
 // Naming Conventions
-// Camelcase
+// camelCase
 // let firstName = "Abhishek";
 // console.log(firstName);
 
-// Pascalcase
+// PascalCase
 // let LastName = "Swami";
 // console.log(LastName);
 
-// Snakecase
+// snake_case
 // let middle_name = "Baswaraj";
 // console.log(middle_name);
 
