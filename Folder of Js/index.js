@@ -348,19 +348,19 @@
 // }
 
 
-function move() {
-   var redElem =  document.getElementsByClassName('red')[0];
-    var poe = 0;
-    var anim = setInterval(animate, 5);
+// function move() {
+//    var redElem =  document.getElementsByClassName('red')[0];
+//     var poe = 0;
+//     var anim = setInterval(animate, 5);
 
-    function animate() {
-        if (poe == 350){
-           clearInterval(anim);
-        } else {
+//     function animate() {
+//         if (poe == 350){
+//            clearInterval(anim);
+//         } else {
 
-            poe++;
-            redElem.style.top = poe + "px";
-            redElem.style.left = poe + "px";
-        }
-    }
-}
+//             poe++;
+//             redElem.style.top = poe + "px";
+//             redElem.style.left = poe + "px";
+//         }
+//     }
+// }

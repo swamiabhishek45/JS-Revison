@@ -31,22 +31,21 @@ const sqrNum = num.map((number) => {
 
 console.log(sqrNum);
 
-*/
 // **********filter method***********
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const isEven = (number) => {
-    if (number % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    };
-}
+// const isEven = (number) => {
+//     if (number % 2 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     };
+// }
 
 
-console.log(numbers.filter(isEven));
+// console.log(numbers.filter(isEven));
 
-/*
+
 // ***********reduce method***************
 const numbers = [1, 2, 3, 4, 5, 10];
 
@@ -116,6 +115,7 @@ const ans = myArray.find(isLength);
 
 console.log(ans);
 
+
 // *****every method*****
 
 const arr = [2,4,6,8,10];
@@ -123,6 +123,8 @@ const arr = [2,4,6,8,10];
 const ans = arr.every((num)=> num%2 === 0)
 
 console.log(ans);
+
+
 // *****some method*****
 
 const arr = [1,3,5,2];
@@ -130,6 +132,7 @@ const arr = [1,3,5,2];
 const ans = arr.some((num)=> num%2 === 0)
 
 console.log(ans);
+
 
 // *****fill method*****
 const myArray = new Array(10).fill(-1);
@@ -153,12 +156,3 @@ myArray.splice(1, 0, "item56");
 console.log(myArray);
 
 */
-
-
-
-
-
-
-
-
-
