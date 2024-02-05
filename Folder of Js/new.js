@@ -1,7 +1,18 @@
-const arr = [1, 2, 3, 4, 5];
+console.log(this);
 
-const inVal = 0;
+function Pet(name){
+    console.log(this);
+    
+    this.name = name;
 
-const ans = arr.reduce((acc, currVal) => acc + currVal, inVal);
+    this.getName = () => this.name;
+}
 
-console.log(ans);
+const cat = new Pet("Fluppy")
+console.log(cat);
+
+console.log(cat.getName());
+
+const { getName } = cat;
+console.log(getName());
+
