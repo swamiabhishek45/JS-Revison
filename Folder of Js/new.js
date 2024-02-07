@@ -1,18 +1,65 @@
-console.log(this);
+const data = [
+  {
+    id: 1,
+    title: "The Lord of the Rings",
+    author: "J.R.R Tolkien",
+    genre: "Fantasy",
+  },
+  {
+    id: 2,
+    title: "The Lord of the Rings",
+    author: "J.R.R Tolkien",
+    genre: "Fantasy",
+  },
+  {
+    id: 3,
+    title: "The Lord of the Rings",
+    author: "J.R.R Tolkien",
+    genre: "Fantasy",
+  },
+  {
+    id: 4,
+    title: "The Lord of the Rings",
+    author: "J.R.R Tolkien",
+    genre: "Fantasy",
+  },
+  {
+    id: 5,
+    title: "The Lord of the Rings",
+    author: "J.R.R Tolkien",
+    genre: "Fantasy",
+  },
+  {
+    id: 6,
+    title: "The Lord of the Rings",
+    author: "J.R.R Tolkien",
+    genre: "Fantasy",
+  },
+];
 
-function Pet(name){
-    console.log(this);
-    
-    this.name = name;
-
-    this.getName = () => this.name;
+function getBooks() {
+  return data;
 }
 
-const cat = new Pet("Fluppy")
-console.log(cat);
+function getBook(id) {
+  return data.find((d) => d.id === id);
+}
 
-console.log(cat.getName());
 
-const { getName } = cat;
-console.log(getName());
 
+// const title = book.title
+// const author = book.author
+const book = getBook(2);
+
+const {title, author} = book;
+author 
+title
+
+const newBook = {
+    id: 6,
+    title: 'Harry Potter and the Chamber of Secrets',
+    author: 'J. K. Rowling'
+}
+
+const booksAfteradd = [...book, newBook];
+console.log('booksAfteradd : ', booksAfteradd);
