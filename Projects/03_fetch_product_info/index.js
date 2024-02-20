@@ -5,9 +5,12 @@
   const url = "https://fakestoreapi.com/products";
   const fetchProducts = async () => {
     try {
-      const res = await fetch(url);
-      const data = await res.json();
-      return data;
+      // const res = await fetch(url);
+      // const data = await res.json();
+      // return data;
+
+      return (await fetch(url)).json();
+      
     } catch (error) {
       throw error;
     }
