@@ -10,7 +10,7 @@
       // return data;
 
       return (await fetch(url)).json();
-      
+
     } catch (error) {
       throw error;
     }
@@ -44,6 +44,8 @@
       producetElem.innerHTML += generateProducts(product);
     });
   };
+
+  // search input 
 
   const filterHandler = (e) => {
     const searchText = e.target.value.toLowerCase();
