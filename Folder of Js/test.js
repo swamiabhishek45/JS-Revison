@@ -1,19 +1,10 @@
-let myName = "Abhishek"
+console.log('Script start !!');
 
-let newName = myName;
-newName = "Santosh"
+setInterval(() => {
+    console.log(Date.now());
+    
+}, 1000)
 
-// console.log(myName);
-// console.log(newName);
+console.log("Script end !!");
 
-let userOne = {
-    email: "user@google.com",
-    upi: "895678303@ybl"
-}
 
-let userTwo = userOne;
-
-userTwo.email= "Abhishek@gmail.com"
-
-console.log(userOne.email);
-console.log(userTwo.email);
