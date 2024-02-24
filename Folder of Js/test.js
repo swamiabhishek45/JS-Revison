@@ -1,10 +1,20 @@
-console.log('Script start !!');
+const bucket = ["coffee", "chips", "vegetables", "salt", "rice"];
 
-setInterval(() => {
-    console.log(Date.now());
+const friedRicePromise = new Promise((resolve, reject) => {
+  if (
+    bucket.includes("salt") &&
+    bucket.includes("vegetables") &&
+    bucket.includes("rice")
+  ) {
+    resolve("Fried Rice");
+  } else {
+    reject("Coudn't do it")
+  }
+});
+
+// consume Promise
+
+friedRicePromise.then((myFriedRice) => {
+    console.log("Lets eat", myFriedRice);
     
-}, 1000)
-
-console.log("Script end !!");
-
-
+})
