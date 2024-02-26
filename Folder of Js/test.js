@@ -1,4 +1,4 @@
-const bucket = ["coffee", "chips", "vegetables", "salt", "rice"];
+const bucket = ["coffee", "chips", "vegetables", "rice"];
 
 const friedRicePromise = new Promise((resolve, reject) => {
   if (
@@ -8,13 +8,19 @@ const friedRicePromise = new Promise((resolve, reject) => {
   ) {
     resolve("Fried Rice");
   } else {
-    reject("Coudn't do it")
+    reject(new Error("Something went wrong"));
   }
 });
 
 // consume Promise
 
-friedRicePromise.then((myFriedRice) => {
-    console.log("Lets eat", myFriedRice);
-    
-})
+friedRicePromise
+  .then(
+    // when promise resolve
+    (myFriedRice) => {
+      console.log("Lets eat", myFriedRice);
+    }
+  )
+  .catch((error) => {
+    console.log(error);
+  });
