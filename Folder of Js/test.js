@@ -1,49 +1,47 @@
-// const bucket = ["coffee", "chips", "vegetables", "rice"];
+// // function returning promise
 
-// const friedRicePromise = new Promise((resolve, reject) => {
-//   if (
-//     bucket.includes("salt") &&
-//     bucket.includes("vegetables") &&
-//     bucket.includes("rice")
-//   ) {
-//     resolve("Fried Rice");
-//   } else {
-//     reject(new Error("Something went wrong"));
-//   }
-// });
+// const bucket = ["coffee", "vegetables", "salt", "cheese","rice" ];
 
-// // consume Promise
+// function ricePromise() {
+//   return new Promise((resolve, reject) => {
 
-// friedRicePromise
-//   .then(
-//     // when promise resolve
-//     (myFriedRice) => {
-//       console.log("Lets eat", myFriedRice);
-//     }
-//   )
-//   .catch((error) => {
-//     console.log(error, "error message");
+//     setTimeout(() => {
+        
+//         if (
+//             bucket.includes("vegetables") &&
+//             bucket.includes("salt") &&
+//             bucket.includes("rice")
+//             ) {
+//                 resolve({ value: "Fried Rice" });
+//             } else {
+//                 reject("Could not find all ingredients");
+//             }
+//         }, 2000);
 //   });
+// }
 
-// const arr = [1,2,3,4,5,6,7,8,9,10]
-// console.log("Original Array", arr);
+// ricePromise().then((myRice) => {
+//     console.log(myRice);
+    
+// }).catch((err) => {
+// console.log("Error Message :",err);
 
+// })
 
-// const pushed = arr.unshift(11)
-// const poped = arr.shift();
+function myPromise() {
+    return new Promise((resolve, reject) => {
+        resolve("Abhishek ")
+    })
+}
 
-// console.log("Pushed", pushed);
-// console.log("poped", poped);
-
-// console.log("New Array", arr);
-
-
-const arr = [1,2,3,4,5,6,7,];
-console.log(arr);
-
-const newArr = [...arr];
-console.log(newArr);
-
-console.log(arr === newArr);
-
-
+myPromise().then((name) => {
+    console.log(name);
+    name += "Baswaraj"
+    return name; // Promise.resolve(name)
+}). then((name) => {
+    console.log(name);
+    name += " Swami"
+    return name;
+}). then((name) => {
+console.log(name);
+})
