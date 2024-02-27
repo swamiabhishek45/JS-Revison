@@ -22,13 +22,28 @@
 // })
 
 // Question 4: add only numbers not string
-var arr = [1, 2, 3, 4, '5', 6, 7, 8, 9, "10"];
-let sum = 0;
-arr.forEach((val) => {
-    if(typeof val === 'number'){
-        sum = sum + val;
-        console.log(sum);  
-    }
-})
+// let sum = 0;
+// arr.forEach((val) => {
+//     if(typeof val === 'number'){
+//         sum = sum + val;
+//         console.log(sum);  
+//     }
+// })
+
+// Bonus Question: 
+var arr = [];
+
+for(var i = 0; i < 10; i++) {
+    arr.push(function() {
+        setTimeout(() => {
+            console.log(i);
+            
+        }, 1000);
+    })
+}
+
+for(var i = 0; i < 10; i++) {
+    arr[i]();
+}
 
 // console.log(arr);
