@@ -15,12 +15,20 @@
 // })
 
 // Question 3: sum of all elements of array
+// let sum = 0;
+// arr.forEach((val) => {
+//     sum = sum +  val;
+//     console.log(sum);
+// })
 
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Question 4: add only numbers not string
+var arr = [1, 2, 3, 4, '5', 6, 7, 8, 9, "10"];
 let sum = 0;
 arr.forEach((val) => {
-    sum = sum +  val;
-    console.log(sum);
-    
+    if(typeof val !== 'string'){
+        sum = sum + val;
+        console.log(sum);  
+    }
 })
+
 // console.log(arr);
