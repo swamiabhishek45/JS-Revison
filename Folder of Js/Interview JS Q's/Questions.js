@@ -25,7 +25,7 @@
 var arr = [1, 2, 3, 4, '5', 6, 7, 8, 9, "10"];
 let sum = 0;
 arr.forEach((val) => {
-    if(typeof val !== 'string'){
+    if(typeof val === 'number'){
         sum = sum + val;
         console.log(sum);  
     }
