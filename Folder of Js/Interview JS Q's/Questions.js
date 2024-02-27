@@ -1,5 +1,3 @@
-var arr = [1,2,3,4,5,6,7,8,9,10];
-
 // forEach is a loop which works on arrays 
 
 // (higher order function) => function inside function
@@ -10,9 +8,19 @@ var arr = [1,2,3,4,5,6,7,8,9,10];
 // })
 
 // Question 2: Print val less than 3
-arr.forEach(function(val){
-    if(val < 3) {
-        console.log(val);   
-    }
+// arr.forEach(function(val){
+//     if(val < 3) {
+//         console.log(val);   
+//     }
+// })
+
+// Question 3: sum of all elements of array
+
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sum = 0;
+arr.forEach((val) => {
+    sum = sum +  val;
+    console.log(sum);
+    
 })
 // console.log(arr);
