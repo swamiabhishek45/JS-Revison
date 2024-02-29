@@ -31,19 +31,39 @@
 // })
 
 // Bonus Question: 
-var arr = [];
+// var arr = []; // let arr = []; 
+// for(var i = 0; i < 10; i++) {
+//     arr.push(function() {
+//         setTimeout(() => {
+//             console.log(i);
+//         }, 1000);
+//     })
+// }
+// for(var i = 0; i < 10; i++) {
+//     arr[i]();
+// }
 
-for(var i = 0; i < 10; i++) {
-    arr.push(function() {
-        setTimeout(() => {
-            console.log(i);
-            
-        }, 1000);
-    })
-}
 
-for(var i = 0; i < 10; i++) {
-    arr[i]();
-}
+// synchronous --> synchronous code executes line by line and if first line is not resolved then code execution will not move to the next line.
+
+// asynchronous --> asynchronous code waits till synchronous code is not finished and when synchronous code finishes executing, then the asynchronous code start it's execution, as the asynchronous code means it probably can have some delay, it also takes something called callback.
+
+console.log('1');
+console.log('2');
+
+setTimeout(() => {
+    console.log('3');
+    
+}, 3000);
+
+setTimeout(() => {
+    console.log('4');
+    
+}, 1000)
+
+console.log("5");
+
+
+
 
 // console.log(arr);
