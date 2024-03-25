@@ -70,7 +70,7 @@ function myPromise() {
 
 myPromise()
     .then(val => {
-        console.log(val);
+        console.log(val); // Abhishek
         val += " Swami";
         return val; // return Promise.resolve(val);
     })
