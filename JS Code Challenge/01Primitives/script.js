@@ -44,10 +44,38 @@ console.log(parseFloat(str));
 console.log(Math.abs(-4));
 console.log(Math.floor(-1.2));
 console.log(Math.floor(1.9));
+console.log(Math.floor(3.4));
+console.log(Math.ceil(3.4));
+console.log(Math.round(3.3));
 
 
-console.log(0.1+0.2 - 0.3 < Number.EPSILON);
+console.log(0.1+0.2 - 0.3 < Number.EPSILON); // 2^-52
 console.log("true" || true);
 console.log(Number.isNaN("bla"));
+
+
+// iterate over a string
+// string can be traversed using its string index
+
+
+var str = "Abhishek"
+// var str = [1,2,3,4,5]
+for(let i = 0; i< str.length; i++){
+    console.log(str[i]);
+    // console.log(str.charAt(i));  
+}
+
+var str = "Abhishek";
+for(let index in str){
+    console.log(str[index]);
+}
+
+var str = "Abhishek";
+for(let value of str){
+    console.log(value);
+}
+
+var str = "Abhishek";
+[...str].forEach((val) => console.log(val));
 
 */
