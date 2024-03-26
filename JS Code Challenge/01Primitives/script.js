@@ -16,9 +16,19 @@ console.log(typeof undeclaredVar); // undefined --> (undeclaredVariable is never
 console.log(typeof Infinity); // number --> (Infinity, -Infinity, -0 are all valid numbers in JavaScript)
 console.log(typeof null); // object --> (This stands since beginning of JavaScript)
 console.log(typeof /regex/); // object --> (regular expression start and end with '/' in literal form)
-console.log(typeof typeof 1);
-
+console.log(typeof typeof 1); // string
+typeof new Date(); // object
 */
+
+// Concatenation of strings and numbers
+
+console.log(1 + "2"); // 12
+console.log(1+2+"3"); // 33
+console.log(1+2+"3"+4+5); // 3345
+console.log(1+2+"3"+(4+5)); // 339
+
+
+
 
 
 
