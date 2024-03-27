@@ -97,8 +97,8 @@ function myApp() {
 myApp();
 
 // block scope vs function scope
-// let and const are block scope
 // var is function scope
+// let and const are block scope
 
 {
     var name = "Abhi";

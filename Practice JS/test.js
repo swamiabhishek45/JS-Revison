@@ -1,19 +1,10 @@
-async function getRandomUser(){
-    // fetch("https://randomuser.me/api")
-    // .then((raw) =>{// get raw data
-    //     console.log(raw);
-    //     return raw.json(); // Convert into readable format
-    // })
-    // .then((data) => { // get real data
-    //     console.log(data);
-    // })
-
-
-    let raw = await fetch("https://randomuser.me/api");
-    let data = await raw.json();
-    console.log(raw);
-    console.log(data);
-    
+function cover(){
+    this.width = 12;
+    this.height = 33;
+    this.color = "brown"
+    this.taste = "sweet";
 }
 
-getRandomUser();
+var biscuit1 = new cover();
+
+console.log(biscuit1);
