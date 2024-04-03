@@ -89,8 +89,23 @@ function func(){
 }
 */
 
+// 6. Write a program where hoisting can be visualized
 
 
+num1 = 10;
+printHello();
+console.log(num1); // 10
+
+var num1;
+function printHello() {
+    console.log("Hello world!!");
+    console.log(num1); // 10
+    
+}
+
+var nonHoistedFunc = function () {
+    console.log("Hello");
+};
 
 
 
