@@ -87,35 +87,34 @@ func()
 function func(){
     console.log(1111);
 }
-*/
 
 // 6. Write a program where hoisting can be visualized
-
 
 num1 = 10;
 printHello();
 console.log(num1); // 10
 
+// variable declarations with var
 var num1;
+
+// function statement or declaration
 function printHello() {
     console.log("Hello world!!");
     console.log(num1); // 10
-    
 }
 
+// function expression do not get hoisted
 var nonHoistedFunc = function () {
     console.log("Hello");
 };
+// arrow function do not get hoisted
+var myFunc = () => {
+    console.log("Helolo");
+};
+*/
 
+// IIFE
 
-
-
-
-
-
-
-
-
-
-
-
++(function IIFE() {
+    console.log("I am an Immediately invoked function");
+})();
