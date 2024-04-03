@@ -111,10 +111,27 @@ var nonHoistedFunc = function () {
 var myFunc = () => {
     console.log("Helolo");
 };
-*/
 
 // IIFE
 
 +(function IIFE() {
     console.log("I am an Immediately invoked function");
 })();
+
+
+(function(param1, param2){
+    console.log("IIFE");
+    console.log("Param1 : " + param1);
+    console.log("Param2 : " + typeof param2);
+    console.log(param2());
+})("hello", function(){
+    console.log("Inside the function");
+    return true;
+});
+
+var randomNumber = (function(){
+    return Math.floor(Math.random() * 100);
+})();
+
+*/
+
