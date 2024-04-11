@@ -135,8 +135,29 @@ var randomNumber = (function(){
 
 */
 
+// write a sum of code in js
 
 
+function fact(n){
+console.log(n);
+
+    if(n>0){
+
+        return n * fact(n-1);
+    }
+
+
+    // var sum = 1;
+    // for(let i = 1; i<=n; i++){
+    //     sum =sum * i
+    // }
+
+    // return sum;
+}
+
+var ans = fact(5);
+
+console.log(ans);
 
 
 
