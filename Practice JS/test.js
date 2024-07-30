@@ -1,10 +1,14 @@
-function cover(){
-    this.width = 12;
-    this.height = 33;
-    this.color = "brown"
-    this.taste = "sweet";
+const book = {
+    title: "Char Bazar",
+    author: "Suresh Kamath",
+    year: 2034,
+    getYear: function(){
+        return this.year;
+    },
 }
 
-var biscuit1 = new cover();
+console.log(Object.keys(book)); // returns an array of keys.
 
-console.log(biscuit1);
+console.log(Object.values(book)); // returns an array of values.
+
+console.log(Object.entries(book)); // returns an array of [key, value] pairs.
